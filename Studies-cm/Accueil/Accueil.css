@@ -1,0 +1,156 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.top-bar {
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        #5a1ea6 0%,
+        #5a1ea6 40%,
+        #2a0a55 40%,
+        #2a0a55 100%
+    );
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.top-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+}
+
+
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 0 0 auto;
+}
+
+.follow-label {
+    font-weight: 500;
+    opacity: 0.95;
+    white-space: nowrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+    background: #ffffff;
+    color: #5a1ea6;
+    transform: translateY(-2px);
+}
+
+
+
+.top-bar-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 30px;
+    flex-shrink: 0;
+}
+
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.info-item i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    transition: color 0.25s ease;
+}
+
+.info-item:hover {
+    color: #ffffff;
+}
+
+.info-item:hover i {
+    color: #ffffff;
+}
+
+
+@media (max-width: 992px) {
+    .top-bar {
+        background: #3a0e7a;
+    }
+
+    .top-bar-inner {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    .top-bar-divider {
+        display: none;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .top-bar-right {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-bar-right {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+}
